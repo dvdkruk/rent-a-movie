@@ -1,10 +1,10 @@
-package movie.rental.shell.shell
+package movie.rental.shell
 
 import org.junit.jupiter.api.Test
 import org.springframework.boot.test.context.SpringBootTest
 
 @SpringBootTest
-class ShellApplicationTests {
+class MovieRentalApplicationTest {
 
 	@Test
 	fun contextLoads() {

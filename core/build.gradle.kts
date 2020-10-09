@@ -1,7 +1,8 @@
 plugins {
     id("org.jetbrains.kotlin.jvm")
-    `java-library`
 }
+
+java.sourceCompatibility = JavaVersion.VERSION_11
 
 dependencies {
     implementation(platform("org.jetbrains.kotlin:kotlin-bom"))
@@ -13,4 +14,11 @@ dependencies {
 
 tasks.withType<Test> {
     useJUnitPlatform()
+}
+
+tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
+    kotlinOptions {
+        freeCompilerArgs = listOf("-Xjsr305=strict")
+        jvmTarget = "11"
+    }
 }

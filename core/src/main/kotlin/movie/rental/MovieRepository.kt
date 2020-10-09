@@ -1,4 +1,4 @@
-package movie.rental.core
+package movie.rental
 
 interface MovieRepository {
     fun getAll(): List<Movie>

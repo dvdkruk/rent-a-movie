@@ -1,1 +1,1 @@
-rootProject.name = "movie-rental-core"
+rootProject.name = "core"

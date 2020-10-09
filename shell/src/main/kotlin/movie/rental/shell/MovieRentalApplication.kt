@@ -1,4 +1,4 @@
-package movie.rental.shell.shell
+package movie.rental.shell
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication

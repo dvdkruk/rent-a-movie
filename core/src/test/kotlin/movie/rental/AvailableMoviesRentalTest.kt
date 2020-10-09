@@ -1,4 +1,4 @@
-package movie.rental.core
+package movie.rental
 
 import kotlin.test.*
 import kotlin.test.Test

@@ -1,1 +1,1 @@
-rootProject.name = "movie-rental-shell"
+rootProject.name = "shell"
