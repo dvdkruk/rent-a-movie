@@ -11,6 +11,4 @@ allprojects {
 subprojects {
     group = "movie.rental"
     version = "1.0"
-
-    apply(plugin = "org.jetbrains.kotlin.jvm")
 }
