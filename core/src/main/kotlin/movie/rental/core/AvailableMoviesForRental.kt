@@ -1,7 +1,5 @@
 package movie.rental.core
 
-class AvailableMoviesRental() {
-    fun execute(): List<Movie> {
-        return listOf()
-    }
+class AvailableMoviesRental(private val moviesRepository: MovieRepository) {
+    fun execute(): List<Movie> = moviesRepository.getAll()
 }

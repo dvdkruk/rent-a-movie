@@ -4,11 +4,11 @@ import kotlin.test.*
 import kotlin.test.Test
 
 internal class AvailableMoviesRentalTest {
-    private val movieRepository: MovieRepository = FakeMovieRepository()
-    private val availableMoviesRental = AvailableMoviesRental()
+    private val movieRepository = FakeMovieRepository()
+    private val availableMoviesRental = MovieRentalFactory(movieRepository).createAvailableMoviesForRental()
 
     @Test
-    fun `given 2 movies available for rental when execute then 2 movies are returned`() {
+    fun `given 2 available movies when requested then return the 2 movies`() {
         val movie1 = Movie("1", "The Lion King", 1)
         val movie2 = Movie("2", "Inception", 2)
         movieRepository.save(movie1)
@@ -16,7 +16,7 @@ internal class AvailableMoviesRentalTest {
 
         val movies = availableMoviesRental.execute()
 
-        assertEquals(2, movies.size)
+        assertEquals(listOf(movie1, movie2), movies)
     }
 }
 
