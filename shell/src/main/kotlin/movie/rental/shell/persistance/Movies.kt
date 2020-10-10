@@ -1,7 +1,7 @@
 package movie.rental.shell.persistance
 
-import movie.rental.Movie
-import movie.rental.MovieRepository
+import movie.rental.catalogue.Movie
+import movie.rental.catalogue.MovieRepository
 import org.springframework.stereotype.Repository
 
 @Repository

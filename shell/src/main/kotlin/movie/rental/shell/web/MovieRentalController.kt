@@ -1,7 +1,7 @@
 package movie.rental.shell.web
 
 import movie.rental.AvailableRentalMovies
-import movie.rental.Movie
+import movie.rental.catalogue.Movie
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RestController
 

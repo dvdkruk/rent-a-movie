@@ -1,4 +1,4 @@
-package movie.rental
+package movie.rental.catalogue
 
 interface MovieRepository {
     fun getAll(): List<Movie>

@@ -1,7 +1,7 @@
 package movie.rental.shell.web
 
 import movie.rental.AvailableRentalMovies
-import movie.rental.Movie
+import movie.rental.catalogue.Movie
 import org.junit.jupiter.params.ParameterizedTest
 import org.junit.jupiter.params.provider.EnumSource
 import org.mockito.Mockito.`when`

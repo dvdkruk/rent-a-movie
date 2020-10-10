@@ -1,5 +1,7 @@
 package movie.rental
 
+import movie.rental.catalogue.Movie
+import movie.rental.catalogue.MovieRepository
 import kotlin.test.*
 import kotlin.test.Test
 

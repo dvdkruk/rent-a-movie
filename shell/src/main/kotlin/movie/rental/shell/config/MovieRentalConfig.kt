@@ -1,7 +1,7 @@
 package movie.rental.shell.config
 
 import movie.rental.MovieRentalFactory
-import movie.rental.MovieRepository
+import movie.rental.catalogue.MovieRepository
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 
