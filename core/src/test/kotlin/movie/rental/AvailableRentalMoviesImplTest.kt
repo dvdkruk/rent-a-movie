@@ -3,7 +3,7 @@ package movie.rental
 import kotlin.test.*
 import kotlin.test.Test
 
-internal class AvailableMoviesRentalTest {
+internal class AvailableRentalMoviesImplTest {
     private val movieRepository = FakeMovieRepository()
     private val availableMoviesRental = MovieRentalFactory(movieRepository).createAvailableMoviesForRental()
 
