@@ -10,7 +10,7 @@ internal class MovieRentalController(private val availableRentalMovies: Availabl
 
     @GetMapping("/movies")
     fun availableMovies(): AvailableMoviesResponse {
-        val movies = availableRentalMovies.execute()
+        val movies = availableRentalMovies.get()
         return AvailableMoviesResponse(movies)
     }
 

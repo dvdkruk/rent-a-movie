@@ -7,7 +7,7 @@ import kotlin.test.Test
 
 internal class AvailableRentalMoviesImplTest {
     private val movieRepository = FakeMovieRepository()
-    private val availableMoviesRental = MovieRentalFactory(movieRepository).createAvailableMoviesForRental()
+    private val availableMoviesRental = createAvailableRentalMovies(movieRepository)
 
     @Test
     fun `given 2 available movies when requested then return the 2 movies`() {
@@ -16,17 +16,17 @@ internal class AvailableRentalMoviesImplTest {
         movieRepository.save(movie1)
         movieRepository.save(movie2)
 
-        val movies = availableMoviesRental.execute()
+        val movies = availableMoviesRental.get()
 
         assertEquals(listOf(movie1, movie2), movies)
     }
 }
 
-internal class FakeMovieRepository : MovieRepository {
-    private val movies = mutableMapOf<String, Movie>()
+internal class FakeMovieRepository(private val movies: MutableMap<String, Movie> = mutableMapOf()) : MovieRepository {
 
     override fun getAll() = ArrayList(movies.values)
 
-    override fun save(movie: Movie) { movies[movie.id] = movie }
-
+    override fun save(movie: Movie) {
+        movies[movie.id] = movie
+    }
 }

@@ -22,7 +22,7 @@ internal class MovieRentalControllerTest @Autowired constructor(
     @ParameterizedTest
     @EnumSource(AvailableMovieRequestsScenarios::class)
     fun `GET movies`(scenario: AvailableMovieRequestsScenarios) {
-        `when`(availableRentalMovies.execute()).thenReturn(scenario.availableMovies)
+        `when`(availableRentalMovies.get()).thenReturn(scenario.availableMovies)
 
         mvc.get("/movies") {
             accept = MediaType.APPLICATION_JSON
@@ -39,7 +39,7 @@ internal class MovieRentalControllerTest @Autowired constructor(
         `1 movie available`(listOf(Movie("1", "Gladiator", 1)), """
             {
                 movies: [
-                    { id: "1", title: "Gladiator", rentalPrice: 1 }
+                    { id: "1", title: "Gladiator", price: 1 }
                 ]
             }
         """.trimIndent())
