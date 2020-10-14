@@ -24,7 +24,6 @@ Decision: Implement option 2 to separate the core/domain for the shell concerns.
 ### Package structure
 
 
-##Requirements
-1. Show available movies for rental.
-2. Renting a movie reduces stock by 1.
-
+## Requirements
+1. Show available movies for rental
+2. Renting a movie reduces stock by 1
