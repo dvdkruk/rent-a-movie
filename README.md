@@ -1,5 +1,5 @@
-# Movie Rental
-A pet project to try out concepts of Clean Architecture and Domain Driven Design.
+# Rent a Movie
+An example project to try out and apply concepts of Clean Architecture and Domain Driven Design.
 
 ## Tech
 - Kotlin
